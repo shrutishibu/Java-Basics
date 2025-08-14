@@ -1,0 +1,35 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile and run basics.java",
+      "type": "shell",
+      "command": "cmd.exe",
+      "args": [
+        "/c",
+        "javac basics.java && java basics < input.txt > output.txt"
+      ],
+      "presentation": {
+        "reveal": "always"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": {
+        "owner": "java",
+        "fileLocation": [
+          "relative",
+          "${workspaceRoot}"
+        ],
+        "pattern": {
+          "regexp": "^(.*\\.java):(\\d+):\\s+(error):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "severity": 3,
+          "message": 4
+        }
+      }
+    }
+  ]
+}
