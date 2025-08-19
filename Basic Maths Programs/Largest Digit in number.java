@@ -19,6 +19,7 @@ n will contain no leading zeroes except when it is 0 itself.
 */
 
 //Solution
+import java.util.*;
 class Solution {
     public int largestDigit(int n) {
         if(n==0) return 0;
